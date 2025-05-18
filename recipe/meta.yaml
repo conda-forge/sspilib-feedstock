@@ -1,5 +1,5 @@
 {% set name = "sspilib" %}
-{% set version = "0.3.0" %}
+{% set version = "0.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/sspilib-{{ version }}.tar.gz
-  sha256: fd81593555a6ab5d3ef0dfb095fda005161ffe331dd991bbbe4592cfc4c27945
+  sha256: 6df074ee54e3bd9c1bccc84233b1ceb846367ba1397dc52b5fae2846f373b154
 
 build:
   skip: true  # [not win or py<38]
@@ -21,7 +21,7 @@ requirements:
   host:
     - python
     - cython >=3.0.0,<4.0.0
-    - setuptools >=61.0.0
+    - setuptools >=77.0.0
     - pip
   run:
     - python
