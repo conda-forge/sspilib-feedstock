@@ -1,5 +1,5 @@
 {% set name = "sspilib" %}
-{% set version = "0.3.1" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/sspilib-{{ version }}.tar.gz
-  sha256: 6df074ee54e3bd9c1bccc84233b1ceb846367ba1397dc52b5fae2846f373b154
+  sha256: b482b3be8dc30e086f89e13831139129c022f90f6e7c0603b3c60209d9a4561d
 
 build:
   skip: true  # [not win or py<38]
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   build:
